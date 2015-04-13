@@ -1,29 +1,23 @@
-html{
+html,body {
+	width: 100%;
 	height: 100%;
-}
-body{
-	min-height: 100%;
+	font-family: GillSans, Calibri, Trebuchet, sans-serif;
 }
 #header{
-	background-color: blue;
-	height: 10%;
+	background-color: #1565c0;
+	height: 150px;
+	color: #ffea00;
+	font-size: 6vmin;
+	text-align: center;
 }
-
-#content{
-	background-color: red;
-	height: 80%;
+#header img{
+	float: left;
+	margin: 15px;
 }
-
-#footer{
-	background-color: yellow;
-	height: 2%;	
-}
-
 #menu{
-	background-color: green;
-	height: 80%;	
-}
-.collection-item{
 	margin: 0;
-	text-indent: 20px;
+	padding: 0;
+}
+#menu .nav-wrapper{
+	background-color: #F9BF3B;
 }

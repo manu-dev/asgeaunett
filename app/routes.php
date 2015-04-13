@@ -11,7 +11,13 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('frontend.accueil');
-});
+Route::get('/',array('uses'=>'HomeController@index'));
+// LOGIN
+Route::get('/admin',array('uses'=>'BackController@index' , 'as' => 'login'));
+Route::get('/logout',array('uses'=>'BackController@logout','as'=>'logout'));
+Route::post('/logMe',array('uses'=>'BackController@logMe','as'=>'log'));
+//Admins
+Route::get('/addRoot',array('before'=>'auth', 'uses'=>'BackController@addRoot', 'as' => 'check.root'));
+Route::post('/listeAdmin',array('before'=>'auth','uses'=>'BackController@ajouterAdmin','as'=>'listeAdmin'));
+Route::get('/listeRoot',array('before'=>'auth','uses'=>'BackController@listeRoot', 'as' => 'listeRoot'));
+

@@ -1,0 +1,5 @@
+<?
+class Partenaire extends Eloquent
+{
+
+}

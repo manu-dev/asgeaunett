@@ -19,5 +19,19 @@ class HomeController extends BaseController {
 	{
 		return View::make('frontend.accueil');
 	}
+	public function contactForm(){
+		return View::make('frontend.contact');
+	}
+	public function sendmail(){
+		$nom = Input::get('nom');
+		$prenom = Input::get('prenom');
+		$mail = Input::get('email');
+		$obj = Input::get('obj');
+		$mess = Input::get('message');
+		$mess = "Nom : $nom Prenom: $prenom mail: $mail ".$mess;
+	$test = mail($mail,$obj,$mess);
+
+
+	}
 
 }

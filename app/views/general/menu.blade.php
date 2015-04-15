@@ -15,11 +15,11 @@
     <div class="nav-wrapper">
         <a href="#" data-activates="mobile"  class="button-collapse"><i class="mdi-navigation-menu"></i></a>
         <ul class="hide-on-med-and-down center-align center">
-            <li><a href="accueil" class='main_selected'>Accueil</a></i></li>
+            <li><a href="/" class='main_selected'>Accueil</a></i></li>
             <li><a href="#" class="dropdown-button" data-activates="dropdownClub" data-beloworigin="true" >Information sur le club<i class="mdi-navigation-arrow-drop-down right"></i></a></li>
             <li><a href="#" class="dropdown-button" data-activates="dropdownJoueurs" data-beloworigin="true" width="150px">Joueurs<i class="mdi-navigation-arrow-drop-down right"></i></a></li>
             <li><a href="photo">Photo et Vidéos</a></li>
-            <li><a href="contact">Nous Contacter</a></i></li>
+            <li><a href="/contact">Nous Contacter</a></i></li>
             <li><a href="membre">Espace Membre</a></i></li>
         </ul>
         <ul class="side-nav" id="mobile"  >

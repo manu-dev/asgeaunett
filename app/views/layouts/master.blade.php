@@ -28,7 +28,7 @@
       <link rel="stylesheet" type="text/css" href="/css/style.css">
     <script type="text/javascript" src="/js/asgtt.js"></script>
     </head>
-    <body class="row">
+    <body class="row" >
         <div id="header" class="col s12 m12 l12">
             @include('general.header')
         </div>

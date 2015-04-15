@@ -21,3 +21,15 @@ html,body {
 #menu .nav-wrapper{
 	background-color: #F9BF3B;
 }
+#dropdownClub{
+	width: 200px;
+}
+#dropdownJoueurs a{
+	background-color: #1565c0;
+	color: #ffea00;
+}
+
+#dropdownClub a,#dropdownClub li {
+	background-color: #1565c0;
+	color: #ffea00;
+}

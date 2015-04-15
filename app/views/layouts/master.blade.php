@@ -1,7 +1,7 @@
 <html>
     <head>
             <title>AS GEAUNE TT</title>
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
     <!-- JQUERY-UI -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css">
@@ -24,6 +24,8 @@
     
     <!-- MES JS -->
 
+    <!-- MES CSS -->
+      <link rel="stylesheet" type="text/css" href="/css/style.css">
     <script type="text/javascript" src="/js/asgtt.js"></script>
     </head>
     <body class="row">

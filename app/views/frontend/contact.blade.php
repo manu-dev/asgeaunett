@@ -27,7 +27,7 @@
 				<i class="mdi-editor-mode-edit prefix"></i>
 				{{ Form::label('message', 'Message'); }}
 				{{ Form::textarea('message','');}}
-<br/>
+			<br/>
 				<button class="btn waves-effect waves-light col s12 m12 l3 offset-l9 blue darken-3" type="submit" name="action">Envoyer !
 				<i class="mdi-content-send right"></i>
   				</button>

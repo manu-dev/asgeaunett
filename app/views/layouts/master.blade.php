@@ -20,7 +20,7 @@
      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
 
     <!-- CKEDITOR -->
-    <script type="text/javascript" src="ckeditor/ckeditor.js"></script>
+    <script type="text/javascript" src="/ckeditor/ckeditor.js"></script>
     
     <!-- MES JS -->
 
@@ -32,13 +32,8 @@
         <div id="header" class="col s12 m12 l12">
             @include('general.header')
         </div>
-        <div id="menu" class="col s12 m12 l12">
-            @if(Auth::check())
-                @include('backend.menu')
-            @else
-                @include('general.menu')
-            @endif
-
+        <div id="menu" class="col s12 m12 l12">   
+            @include('general.menu')
         </div>
         <div id="content">
             @section('content')

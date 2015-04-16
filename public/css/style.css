@@ -22,20 +22,17 @@ html,body {
 #menu .nav-wrapper{
 	background-color: #F9BF3B;
 }
-#dropdownClub a{
+#dropdownClub a,
+#dropdownJoueurs a,
+#dropdownPages a{
 	background-color: #1565c0;
 	color: #ffea00;
 }
-#dropdownClub a:hover{
+#dropdownClub a:hover,
+#dropdownJoueurs a:hover,
+#dropdownPages a:hover{
 	background-color: #F9BF3B;
 	color: #1565c0;
-}#dropdownJoueurs a:hover{
-	background-color: #F9BF3B;
-	color: #1565c0;
-}
-#dropdownJoueurs a{
-	background-color: #1565c0;
-	color: #ffea00;
 }
 h1{
 	margin: 0;
@@ -48,6 +45,7 @@ h1{
 	font-size: 3vmin;
 }
 #content{
+	padding: 15px;
 }	
 
 /* label focus color */
@@ -55,7 +53,10 @@ h1{
 	color: #1565c0;
 }
  /* label underline focus color */
-   .input-field input[type=text]:focus, input-field input[type=email]:focus {
+   .input-field input[type=text]:focus, 
+   .input-field input[type=email]:focus,
+   .input-field input[type=password]:focus
+    {
      border-bottom: 1px solid #1565c0;
    }
    /* icon prefix focus color */
@@ -65,3 +66,21 @@ h1{
    .btn{
    	margin: 15px;
    }
+#bodyCo{
+	background-color: #1565c0;
+}
+#connexion{
+	background-color: 	white;
+}
+#imgconn{
+	margin-top: 15px;	
+	margin-bottom: 15px;	
+	background-color: #1565c0;
+	padding: 30px 15px 30px 15px;		
+	width:  160px;	
+	height: 160px;	
+}
+.deco {
+	background-color: 	white;
+	margin-top: 150px;	
+}

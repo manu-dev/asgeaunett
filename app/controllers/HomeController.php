@@ -29,8 +29,8 @@ class HomeController extends BaseController {
 		$obj = Input::get('obj');
 		$mess = Input::get('message');
 		$mess = "Nom : $nom Prenom: $prenom mail: $mail ".$mess;
-	$test = mail($mail,$obj,$mess);
-
+		$test = mail($mail,$obj,$mess);
+	return Redirect::to('/');
 
 	}
 

@@ -35,7 +35,7 @@
         <div id="menu" class="col s12 m12 l12">   
             @include('general.menu')
         </div>
-        <div id="content">
+        <div id="content" class="row" >
             @section('content')
                 Bienvenue sur le site de l'AS Geaune TT
             @show

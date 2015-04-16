@@ -33,31 +33,52 @@ class BackController extends BaseController
         Auth::logout();
         return Redirect::to('/');
     }
+    // Partie gestion des articles
 
-
-    //Partie gestion des comptes:
-
-    public function listeRoot(){
-        $users = Player::where('statut','=','admin')->get();
-        return View::make('backend.listeRoot')->with('users',$users);
-        
+    public function listeArticle(){
+        $articles = Article::all();
+        return View::make('backend.listeArticle')->with('articles',$articles);  
     }
-    public function addRoot(){
-        return View::make('backend.admin');
+    public function addArticle(){
+        return View::make('backend.addArticle');
     }
-    public function ajouterAdmin(){
-        $username = Input::get('login');
-        $pwd = Input::get('mdp');
-        $pw2 = Input::get('mdp2');
-        $email = Input::get('mail');
-        $statut ='admin';
-            $player = new Player;
-            $player->username = $username;
-            $player->password = Hash::make($pwd);
-            $player->email = $email;
-            $player->statut = $statut;
-            $player->save();
-            $users = Player::where('statut','=','admin')->get();
-            return View::Make('backend.listeAdmin')->with('users',$users);
-        }   
+    public function article_added(){
+            $titre = Input::get('titre');
+            $mess = Input::get('mess');
+            $actif = Input::get('actif');
+            if($actif == 'on'){
+                $actif = 1;
+            }
+            else{
+                $actif = 0;
+            }
+            $article = new Article;
+            $article->title = $titre;
+            $article->content = $mess;
+            $article->actif = $actif;
+            $article->save();   
+            return Redirect::to('/liste_articles');
+    }
+    public function delete_article($id){
+        Article::find($id)->delete();
+        return Redirect::to('/liste_articles');
+    }
+    public function modif_article($id){
+        $article = Article::find($id);
+        return View::make('backend.modifArticle')->with('article',$article);
+    }
+    public function article_modified(){
+        $title = Input::get('titre');
+        $content = Input::get('mess');
+        $actif = Input::get('actif');
+        $id = Input::get('id');
+
+        $article = Article::find($id);
+        $article->title = $title;
+        $article->content = $content;
+        $article->actif = $actif;
+        $article->save();
+
+        return Redirect::to('/liste_articles');
+    }
 }

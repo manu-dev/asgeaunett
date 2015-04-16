@@ -16,10 +16,13 @@ Route::get('/',array('uses'=>'HomeController@index'));
 Route::get('/login',array('uses'=>'BackController@index' , 'as' => 'login'));
 Route::get('/logout',array('uses'=>'BackController@logout','as'=>'logout'));
 Route::post('/user/me',array('uses'=>'BackController@logMe','as'=>'log'));
-//Admins
-Route::get('/addRoot',array('before'=>'auth', 'uses'=>'BackController@addRoot', 'as' => 'check.root'));
-Route::post('/listeAdmin',array('before'=>'auth','uses'=>'BackController@ajouterAdmin','as'=>'listeAdmin'));
-Route::get('/listeRoot',array('before'=>'auth','uses'=>'BackController@listeRoot', 'as' => 'listeRoot'));
 //CONTACT
 Route::get('/contact',array('uses'=>'HomeController@contactForm','as'=>'contact'));
 Route::post('/envoyerMail',array('uses'=>'HomeController@sendmail','as'=>'sendmail'));
+// ARTICLES
+Route::get('/liste_articles',array('uses'=>'BackController@listeArticle','as'=>'liste_articles'));
+Route::get('/add_article',array('uses'=>'BackController@addArticle','as'=>'form_articles'));
+Route::post('/article_added',array('uses'=>'BackController@article_added','as'=>'article_added'));
+Route::get('/delete_article/{id}',array('uses'=>'BackController@delete_article','as'=>'delete_article'));
+Route::get('/modif_article/{id}',array('uses'=>'BackController@modif_article','as'=>'modif_article'));
+Route::post('/article_modified',array('uses'=>'BackController@article_modified','as'=>'article_modified'));

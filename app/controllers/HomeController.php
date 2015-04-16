@@ -17,7 +17,8 @@ class HomeController extends BaseController {
 
 	public function index()
 	{
-		return View::make('frontend.accueil');
+		$articles = Article::where('actif','=','1')->get();
+		return View::make('frontend.accueil')->with('articles',$articles);
 	}
 	public function contactForm(){
 		return View::make('frontend.contact');

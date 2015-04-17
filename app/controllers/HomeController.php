@@ -24,7 +24,7 @@ class HomeController extends BaseController {
 		return View::make('frontend.contact');
 	}
 	public function sendmail(){
-		$nom = Input::get('nom');
+		$nom = Input::get('nom');	
 		$prenom = Input::get('prenom');
 		$mail = Input::get('email');
 		$obj = Input::get('obj');
@@ -32,7 +32,7 @@ class HomeController extends BaseController {
 		$mess = "Nom : $nom Prenom: $prenom mail: $mail ".$mess;
 		$test = mail($mail,$obj,$mess);
 	return Redirect::to('/');
-
 	}
 
 }
+?>

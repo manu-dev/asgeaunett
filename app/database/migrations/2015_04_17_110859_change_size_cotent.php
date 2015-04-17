@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateArticles extends Migration {
+class ChangeSizeCotent extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,12 +12,10 @@ class CreateArticles extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('articles', function($t) {
-			$t->increments('id');
-			$t->string('title', 100);
-			$t->string('content',10000);
-			$t->timestamps();
-		});
+		Schema::table('articles', function($table)
+		{
+   			 $table->string('content', 100000);
+   		});
 	}
 
 	/**
@@ -27,7 +25,10 @@ class CreateArticles extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('articles');
+		Schema::table('articles', function($table)
+		{
+   			 $table->string('content', 255)->change();
+   		});
 	}
 
 }
